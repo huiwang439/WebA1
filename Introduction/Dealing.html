@@ -1,0 +1,132 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Coffee Dealing</title>  
+    <link rel="stylesheet" href="style2_layout.css">  
+    <link rel="stylesheet" href="style2.css">
+</head>  
+<body class="body-background">  
+    <nav>
+        <p>Your Name Coffee</p>
+        
+        <ul>
+          <li><a href="../Home/Home.html" target="top">Home</a></li>
+          
+          <li><a href="../AboutUs/AudienceGroup.html" target="top">About</a>
+            <ul>
+                <li><a href="../AboutUs/AudienceGroup.html" target="top">Audience Group</a></li>  
+                <li><a href="../AboutUs/ManagementIdea.html" target="top">Management Idea</a></li>  
+                <li><a href="../AboutUs/SocialResponsibility.html" target="top">Social Responsibility</a></li>    
+            </ul>
+          </li>
+          
+          <li><a href="../Introduction/Type.html" target="top">Introduction</a>
+            <ul>
+                <li><a href="../Introduction/Type.html" target="top">Type</a></li>  
+                <li><a href="../Introduction/Dealing.html" target="top">Dealing</a></li>  
+                <li><a href="../Introduction/Making.html" target="top">Making</a></li>    
+            </ul>
+          </li>
+    
+          <li><img id="logo" src="logo.jpg" alt="logo" onclick="location.href='../Home/Home.html'"></li>
+          
+          <li><a href="../Menu/MENU.html" target="top">Menu</a>
+            <ul>
+              <li><a href="../Menu/MENU.html" target="top">Coffee</a></li>  
+              <li><a href="../Menu/Cake.html" target="top">Cake</a></li>  
+              <li><a href="../Menu/Coffee Bean.html" target="top">Coffee Bean</a></li>    
+          </ul>
+          </li>
+             
+          <li><a href="../REWARDS/REWARDS.html" target="top">Rewards</a>
+            <ul>
+                <li><a href="../REWARDS/Join Us.html" target="top">Join Us</a></li>  
+                <li><a href="../REWARDS/Integral Mall.html" target="top">Integral Mall</a></li>   
+            </ul>
+          </li>
+          
+          <li><a href="../Contact/Contact.html" target="top">Contact</a>
+            <ul>
+              <li><a href="../Contact/Contact.html" target="top">Contact Us</a></li>  
+              <li><a href="../Contact/Reservation.html" target="top">Online Reservation</a></li>   
+              <li><a href="../Contact/Comment.html" target="top">Online Comment</a></li>  
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    
+    <header>  
+        <div class="header-bg">  
+            <img src="header1.jpg" alt="header" class="coffee-cup">  
+        </div> 
+        <div id="header-buttons">  
+            <button onclick="navigateTo('../Introduction/Type.html', 'Type')">Type</button>  
+            <button onclick="navigateTo('../Introduction/Dealing.html', 'Dealing')">Dealing</button>  
+            <button onclick="navigateTo('../Introduction/Making.html', 'Making')">Making</button>  
+        </div>  
+          
+        <script>  
+        function navigateTo(url, pageName) {  
+            // 设置localStorage中的当前页面  
+            localStorage.setItem('currentPage', pageName);  
+            // 导航到新页面  
+            location.href = url;  
+        }  
+          
+        document.addEventListener("DOMContentLoaded", function() {  
+            var buttons = document.querySelectorAll("#header-buttons button");  
+            var currentPage = localStorage.getItem('currentPage') || ''; // 获取当前页面，如果没有则默认为空  
+          
+            buttons.forEach(function(button) {  
+                // 根据当前页面的名称，给对应的按钮添加或移除active类  
+                if (button.getAttribute('onclick').includes(currentPage)) {  
+                    button.classList.add("active");  
+                } else {  
+                    button.classList.remove("active");  
+                }  
+            });  
+        });  
+        </script>
+        
+        <div class="header-p">
+        <img src="biao1.jpg" alt="header" class="coffee-b">
+        <img src="biao2.jpg" alt="header" class="coffee-b">
+        <img src="biao3.jpg" alt="header" class="coffee-b">
+        <img src="biao4.jpg" alt="header" class="coffee-b">
+    </header>  
+    <main>  
+        <section class="info-blocks">  
+            <div class="info-block">  
+                <img src="sunshine.jpg" alt="rishai">  
+                <h2>Sun-drying</h2>  
+                <p>
+                    Sun-drying, the most traditional and long-established process, is also known as natural drying or simply drying.
+                </p> 
+                <p>
+                    The beans produced by this method are less acidic and sweeter, and have a complex and rich flavor, although they are not as clean as they could be.
+                </p>
+            </div>  
+            <div class="info-block">  
+                <img src="water.jpg" alt="water">  
+                <h2>The Washing Process</h2>  
+                <p>The washed method, as the classic treatment method is called, means exactly what it says - the beans are washed with water.</p>
+                <p>This method results in a coffee with fresh and bright acidity, a pure and unadulterated taste, and a refreshing flavor, but its richness is relatively weak.</p>
+            </div>  
+            <div class="info-block">  
+                <img src="mi.jpg" alt="mi">  
+                <h2>Honey Treatment</h2>  
+                <p>Originating from a unique Costa Rican process, this treatment skillfully combines the advantages of the solarization and washing methods.</p>
+                <p>It is characterized by an outstanding flavor, sweet and sour, with an aromatic and mellow texture.</p>
+            </div>
+        </section>  
+    </main>  
+    <footer>  
+        <p>@ All rights reserved YourName Coffee<br>
+            Last updated: October 3, 2024<br>
+            Contact Email address: 9952623YNC@gmail.com
+        </p>  
+    </footer>  
+</body>  
+</html>

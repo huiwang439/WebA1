@@ -1,0 +1,154 @@
+@charset "utf-8";  
+  
+html {  
+    background: white;  
+}  
+
+.body-background{
+  background-image: url('img/background4.png');
+  background-size: cover;
+  background-position: center;
+}
+
+body > header > h1,body > header > h2 {  
+    background: #543125;  
+    color: whitesmoke;  
+    padding: 20px;  
+    text-align: center;  
+}  
+  
+body > header > nav > ul {  
+    text-align: center;  
+}  
+  
+body > header > nav > ul li {  
+    list-style: none;  
+    display: inline-block;  
+}  
+  
+.link-box {  
+    background: rgb(189,168,140);  
+    color: white;  
+    text-decoration: none;  
+    font-size: 15px;  
+    display: inline-block;  
+    padding: 10px;  
+    margin: 10px;  
+    border-radius: 10px;  
+    /* Added hover effect */
+    transition: background 0.3s ease;
+}  
+ 
+.link-box:hover {
+  background: #543125;
+}
+
+body > header > nav:nth-of-type(1) > ul > li:first-child > .link-box {  
+    background-color: #543125;  
+    color: white;  
+}  
+
+body > header > nav:nth-of-type(2) > ul > li:first-child > .link-box {  
+    background-color: #543125;  
+    color: white;  
+}  
+
+main > img {
+    width:100%;
+    height:auto;
+}
+
+footer {
+    background:#333;
+    padding:10px;
+    color:#c5b4b4;
+    text-align: center; 
+    font-size:1.5vw;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Overall style of navigation bar */
+ body > nav {
+    background-color: #333;
+    position: relative;
+  }
+  
+  /* Unordered list style */
+ body > nav > ul {
+    list-style-type: none;
+    padding: 0; /* Remove the default padding */  
+    margin: 0; /* Remove the default margin */  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* List item style */
+  body > nav > ul > li {
+    position: relative;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 0;
+    font-size:2.5vw;
+    font-family: 华文新魏;
+  }
+
+  @media (max-width: 400px) {  
+    body > nav > ul > li {
+      font-size:2.0vw;
+    }
+  }  
+
+  body nav ul li a {
+    text-decoration: none; /* ununderline */
+    color: white; /* Change the color to white */
+}
+
+  
+  /* Drop-down menu style, initially hidden */
+  body > nav > ul li ul {  
+    display: none;  
+    position: absolute;  
+    top: 100%;  
+    left: 0; /* Make sure the drop-down menu starts to the left of the parent list item */  
+    background-color: #333;  
+    list-style-type: none; /* Dot removal */  
+    padding: 0; /* Remove the default padding and make sure the text is snug to the left */  
+    font-size:1.8vw;
+    width:180px;
+}  
+  
+  /* A drop-down menu is displayed when the mouse hovers over a list item */
+  body > nav > ul > li:hover > ul {
+    display: block;
+  }
+  
+  /* List item style in the drop-down menu */
+  body > nav > ul ul li {
+    width: 100%;
+    padding:10px;
+    font-family: 华文新魏;
+  }
+  
+  /* logo */
+  #logo {
+    width: 10.0vw;
+    border-radius: 30%;
+  }
+  
+  body > nav > p {
+    font-family:华文隶书;
+    color:rgb(234, 214, 192);
+    font-size:4.5vw;
+    padding-top: 20px;
+    padding-left:5%;
+    margin-top:0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }

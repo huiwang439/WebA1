@@ -1,0 +1,150 @@
+@charset "utf-8"; 
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+.body-background{
+  background-image: url('img/background1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+  /* Overall style of navigation bar */
+ body > nav {
+    background-color: #333;
+    position: relative;
+  }
+  
+  /* Unordered list style */
+ body > nav > ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* List item style */
+  body > nav > ul > li {
+    position: relative;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 0;
+    font-size:2.5vw;
+    font-family: 华文新魏;
+  }
+
+  @media (max-width: 400px) {  
+    body > nav > ul > li {
+      font-size:2.0vw;
+    }
+  }  
+
+  body nav ul li a {
+    text-decoration: none; 
+    color: white; 
+}
+
+  
+  /* Drop-down menu style, initially hidden */
+  body > nav > ul li ul {  
+    display: none;  
+    position: absolute;  
+    top: 100%;  
+    left: 0; 
+    background-color: #333;  
+    list-style-type: none; 
+    padding: 0; 
+    font-size:1.8vw;
+    width:180px;
+    z-index:11;
+}  
+  
+  /* A drop-down menu is displayed when the mouse hovers over a list item */
+  body > nav > ul > li:hover > ul {
+    display: block;
+  }
+  
+  /* List item style in the drop-down menu */
+  body > nav > ul ul li {
+    width: 100%;
+    padding:10px;
+    font-family: 华文新魏;
+  }
+  
+  /* logo */
+  #logo {
+    width: 10.0vw;
+    border-radius: 30%;
+  }
+  
+.carousel {  
+  position: relative;  
+  width: 100%;  
+  overflow: hidden; 
+}  
+  
+.carousel-img {  
+  width: 70%;  
+  height: auto;  
+  display: none;  
+  margin-left:15%;
+}  
+  
+.carousel-img:first-child {  
+  display: block;  
+}  
+  
+.carousel-prev, .carousel-next {  
+  position: absolute;  
+  top: 50%;  
+  transform: translateY(-50%);  
+  cursor: pointer;  
+  background-color: rgba(0, 0, 0, 0.5);   
+  color: white;  
+  border: none;  
+  padding: 10px 20px;  
+  z-index: 10; /* Make sure the button is on top of the picture */  
+}  
+  
+.carousel-prev {  
+  left: 10px;  
+  margin-left:15%;
+}  
+  
+.carousel-next {  
+  right: 10px;  
+  margin-right:15%;
+}
+
+.menu, .new{
+  width:80%;
+  height:auto;
+  margin-left:10%;
+  margin-top:20px;
+}
+
+footer {
+  margin-top:20px;
+  background:#333;
+  padding:10px;
+  color:#c5b4b4;
+  text-align: center; 
+  font-size:1.5vw;
+}
+
+body > nav > p {
+  font-family:华文隶书;
+  color:rgb(234, 214, 192);
+  font-size:4.5vw;
+  padding-top: 20px;
+  padding-left:5%;
+  margin-top:0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}

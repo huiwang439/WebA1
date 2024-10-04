@@ -1,0 +1,98 @@
+@charset "utf-8"; 
+
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    background-color:whitesmoke;  
+}  
+  
+.header-bg {  
+    background-color: #453029; /* 棕色背景 */  
+    color: #ecdbdb;  
+    padding: 20px; 
+    text-align: center;  
+}  
+.header-p{
+    background-color: rgba(80, 32, 32, 0.187);
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 20px;
+    font-family: 华文仿宋;
+}
+#header-buttons button {    
+    background-color: rgb(189, 168, 140); /* 绿色背景 */    
+    border: none;    
+    color: white;    
+    padding: 10px 20px;    
+    text-align: center;    
+    text-decoration: none;    
+    display: inline-block;    
+    font-size: 20px;    
+    margin: 2px 5px;    
+    cursor: pointer;    
+    margin-left: 50px;  
+    border-radius: 5px; /* 可选：给按钮添加圆角 */    
+    width: 100px;  
+    height: 50px;  
+    transition: background-color 0.3s ease; /* 添加过渡效果 */  
+}  
+  
+#header-buttons {  
+    text-align: center;  
+}  
+  
+#header-buttons button:hover {    
+    background-color: #543125; /* 鼠标悬停时颜色稍暗 */    
+}  
+  
+#header-buttons button.active {    
+    background-color: #543125; /* 被点击时的颜色，但会立即恢复 */  
+}  
+
+.coffee-cup {  
+    width: 100%; /* 假设图片大小 */  
+    height: 500px;  
+    margin-bottom: 10px;  
+}  
+  
+.info-blocks {  
+    display: flex;  
+    justify-content: space-around;  
+    flex-wrap: wrap;  
+    padding: 20px;  
+}  
+  
+.info-block {  
+    width: calc(25% - 50px); /* 假设三列布局，每列间距为20px */ 
+    height: auto; 
+    margin: 10px;  
+    box-shadow: 0 3px 4px rgba(80, 32, 32, 0.1);  
+    background-color: rgb(189, 168, 140);  
+    padding: 15px;  
+}  
+  
+.info-block img {  
+    width: 60%;  
+    height: 300px;  
+    display: block;  
+    margin-top: 0%;
+    padding-left: 20%;
+}
+  
+.contact-info p {  
+    margin: 0 0 10px 0; /* 移除上下边距，设置下边距 */  
+}  
+  
+/* 页脚样式 */  
+footer {  
+    text-align: center; /* 文本居中 */  
+    padding: 10px 0; /* 上下内边距 */  
+    background-color: #333; /* 深灰色背景 */  
+    color: rgb(189, 168, 140); /* 白色文字 */  
+    position: static; /* 默认为static，如果不需要固定在底部 */  
+    width: 100%; /* 宽度占满 */  
+    margin-top: 20px; /* 与上方内容保持间距 */  
+    font-size:1.5vw;
+}  

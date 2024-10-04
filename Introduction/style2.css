@@ -1,0 +1,107 @@
+@charset "utf-8"; 
+
+.info-block>p {
+    font-size: 30px;    
+}
+.info-block>h2{
+    font-size: 45px;    
+    font-family: 华文隶书;
+    text-align: center;
+}
+
+header > p{
+    padding-left: 2% ;
+    font-size: 20px;
+    color: rgb(163, 147, 126);
+}
+.body-background {  
+  background-image: url('background2.jpg');  
+  background-size: cover;  
+  background-position: center;  
+  /* 可以添加更多样式 */  
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 导航栏整体样式 */
+ body > nav {
+    background-color: #333;
+    position: relative;
+  }
+  
+  /* 无序列表样式 */
+ body > nav > ul {
+    list-style-type: none;
+    padding: 0; /* 移除默认的padding */  
+    margin: 0; /* 移除默认的margin */  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* 列表项样式 */
+  body > nav > ul > li {
+    position: relative;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 0;
+    font-size:2.5vw;
+    font-family: 华文新魏;
+  }
+
+  @media (max-width: 400px) {  
+    body > nav > ul > li {
+      font-size:2.0vw;
+    }
+  }  
+
+  body nav ul li a {
+    text-decoration: none; /* 去掉下划线 */
+    color: white; /* 将颜色改为白色 */
+}
+
+  
+  /* 下拉菜单样式，初始隐藏 */
+  body > nav > ul li ul {  
+    display: none;  
+    position: absolute;  
+    top: 100%;  
+    left: 0; /* 确保下拉菜单从父列表项的左边开始 */  
+    background-color: #333;  
+    list-style-type: none; /* 移除圆点 */  
+    padding: 0; /* 移除默认的padding，确保文字紧贴左边 */  
+    font-size:1.8vw;
+    width:180px;
+}  
+  
+  /* 当鼠标悬停在列表项时显示下拉菜单 */
+  body > nav > ul > li:hover > ul {
+    display: block;
+  }
+  
+  /* 下拉菜单中的列表项样式 */
+  body > nav > ul ul li {
+    width: 100%;
+    padding:10px;
+    font-family: 华文隶书;
+  }
+  
+  /* logo样式 */
+  #logo {
+    width: 10.0vw;
+    border-radius: 30%;
+  }
+  
+  
+  body > nav > p {
+    font-family:华文隶书;
+    color:white;
+    font-size:4.5vw;
+    padding-top: 20px;
+    padding-left:5%;
+  }

@@ -1,0 +1,202 @@
+@charset "utf-8";  
+  
+html {  
+    background: white; 
+    font-size: 30px;  
+}  
+
+.body-background{
+    background-image: url('img/background2.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+body > header > h1,body > header > h2 {  
+    background: #543125;  
+    color: whitesmoke;  
+    padding: 20px;  
+    text-align: center;  
+}  
+  
+body > header > nav > ul {  
+    text-align: center;  
+}  
+  
+body > header > nav > ul li {  
+    list-style: none;  
+    display: inline-block;  
+}  
+  
+.link-box {  
+    background: rgb(189,168,140);  
+    color: white;  
+    text-decoration: none;  
+    font-size: 15px;  
+    display: inline-block;  
+    padding: 10px;  
+    margin: 10px;  
+    border-radius: 10px;  
+    /* Added hover effect */
+    transition: background 0.3s ease;
+}  
+  
+.link-box:hover {
+    background: #543125;
+}
+
+body > header > nav:nth-of-type(1) > ul > li:first-child > .link-box {  
+    background-color: #543125;  
+    color: white;  
+}  
+
+body > header > nav:nth-of-type(2) > ul > li:nth-of-type(3) > .link-box {  
+    background-color: #543125;  
+    color: white;  
+}  
+
+#image1 {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width:100%;
+    height:auto;
+}
+
+.box {
+    display: flex;
+    margin: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow:hidden;
+}
+
+.image2, .image3 {
+    width: 50%; 
+    height: auto;  
+    object-fit: cover; 
+    margin: 0;  
+}
+
+.text2, .text3 {
+    width: 50%;
+    padding: 10px;   
+}
+
+.text2 p, .text3 p {  
+    font-size: 1rem;   
+}  
+
+@media (max-width: 768px) {  
+    .text2 p, .text3 p {  
+        font-size: 0.5rem;   
+    }   
+}  
+  
+@media (max-width: 480px) {  
+    .text2 p, .text3 p {  
+        font-size: 0.5rem; 
+    }   
+  
+    .box {  
+        flex-direction: column; 
+    }  
+  
+    .image2, .image3, .text2, .text3 {  
+        width: 100%;  
+    }  
+}
+
+footer {
+    background:#333;
+    padding:10px;
+    color:#c5b4b4;
+    text-align: center; 
+    font-size:1.5vw;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Overall style of navigation bar */
+ body > nav {
+    background-color: #333;
+    position: relative;
+  }
+  
+  /* Unordered list style */
+ body > nav > ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* List item style */
+  body > nav > ul > li {
+    position: relative;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 0;
+    font-size:2.5vw;
+    font-family: 华文新魏;
+  }
+
+  @media (max-width: 400px) {  
+    body > nav > ul > li {
+      font-size:2.0vw;
+    }
+  }  
+
+  body nav ul li a {
+    text-decoration: none; 
+    color: white;
+}
+
+  
+  /* Drop-down menu style, initially hidden */
+  body > nav > ul li ul {  
+    display: none;  
+    position: absolute;  
+    top: 100%;  
+    left: 0; 
+    background-color: #333;  
+    list-style-type: none; 
+    padding: 0; 
+    font-size:1.8vw;
+    width:180px;
+}  
+  
+  /* A drop-down menu is displayed when the mouse hovers over a list item */
+  body > nav > ul > li:hover > ul {
+    display: block;
+  }
+  
+  /* List item style in the drop-down menu */
+  body > nav > ul ul li {
+    width: 100%;
+    padding:10px;
+    font-family: 华文新魏;
+  }
+  
+  /* logo */
+  #logo {
+    width: 10.0vw;
+    border-radius: 30%;
+  }
+
+  body > nav > p {
+    font-family:华文隶书;
+    color:rgb(234, 214, 192);
+    font-size:4.5vw;
+    padding-top: 20px;
+    padding-left:5%;
+    margin-top:0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }

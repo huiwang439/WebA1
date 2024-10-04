@@ -1,0 +1,150 @@
+/*默认样式的清零*/ 
+*{
+	margin: 0px;
+	padding: 0;
+}
+
+body {  
+	font-size:16px; 
+	background-color:whitesmoke;
+    margin:0 auto; /*水平居中*/
+	width:100%; 	
+}
+header > ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;  
+}
+header > ul > li {
+    display: inline; 
+    text-align: center;
+	margin: 0 10px;  
+	margin-left: 100px;
+}
+#header-buttons button {    
+    background-color: rgb(189, 168, 140); /* 绿色背景 */    
+    border: none;    
+    color: white;    
+    padding: 10px 20px;    
+    text-align: center;    
+    text-decoration: none;    
+    display: inline-block;    
+    font-size: 20px;    
+    margin: 2px 5px;    
+    cursor: pointer;    
+    margin-left: 50px;  
+    border-radius: 5px; /* 可选：给按钮添加圆角 */    
+    width: 100px;  
+    height: 50px;  
+    transition: background-color 0.3s ease; /* 添加过渡效果 */  
+}  
+  
+#header-buttons {  
+    text-align: center;  
+}  
+  
+#header-buttons button:hover {    
+    background-color: #543125; /* 鼠标悬停时颜色稍暗 */    
+}  
+  
+#header-buttons button.active {    
+    background-color: #543125; /* 被点击时的颜色，但会立即恢复 */  
+}  
+
+header { 
+	height: 100%;/*必须添加，否则header下面有10px而不是5px空白*/
+    width: 100%;
+    background-color:#453029;
+}
+header > img {
+    width: 100%;
+    height: 500px;
+    padding-bottom: 25px;
+}
+header > ul {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%
+}
+
+#nav{ 
+	height:20px;	
+	background-color: white; 		
+	font: 18px/30px 微软雅黑;
+	color: #dc8d8d;
+	letter-spacing: 2px;
+    text-align: center;
+}
+
+main {
+    background: white;
+    height: auto;
+    width:100%;
+}
+
+main > aside {
+    float: left;
+    width: 30%;
+    height: 100%;
+    background-color:whitesmoke;
+    text-align: center;
+    font-size: 16px; /* 这里补充了合理的字体大小值 */
+    display:flex;/* 添加这一行 */
+    flex-direction:column; /* 添加这一行，使子元素垂直排列 */
+}
+
+aside img {
+    margin-top: 30px;
+    height: 190px;
+}
+
+
+#content1{ 
+	float:right; 
+	width:68%; 
+	height: 190px;
+    margin-top: 30px;
+	margin-bottom:20px;
+	background-color: rgb(189, 168, 140);
+    font-size: 1.75vw;
+    margin-right: 20px;
+    padding: 3px;
+}
+#content2{ 
+	float:right; 
+	width:68%; 
+	height: 190px;
+    margin-top: 40px;
+	margin-bottom:20px;
+	background-color: rgb(189, 168, 140);
+    font-size: 1.75vw;
+    margin-right: 20px;
+    padding: 3px;
+}
+#content3>p{ 
+	float:right; 
+	width:68%; 
+	height: 190px;
+    margin-top: 40px;
+	margin-bottom:20px;
+	background-color: rgb(189, 168, 140);
+    font-size: 1.75vw;
+    margin-right: 20px;
+    padding: 3px;
+}
+#footer { 
+	height:auto; 
+	position: static;
+	background-color: #333;
+	clear:both; /*新加代码*/
+	margin-top: 20px;
+	text-align: center;
+    color: rgb(189, 168, 140);
+    padding: 20px 0;
+    font-size:1.5vw;
+}
+

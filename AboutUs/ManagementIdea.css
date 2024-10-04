@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+html{
+    background:white;
+    font-size:20px;
+}
+
+.body-background{
+    background-image: url('img/background7.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+body > header > h1 {
+    background:#543125;
+    color:whitesmoke;
+    padding:20px;
+    text-align: center;
+}
+
+body > header > nav > ul {
+    text-align: center;
+}
+
+body > header > nav > ul li {
+    list-style:none; /*Drop point*/
+    display: inline-block; /* Make the li element appear on the same line */  
+}
+
+.link-box {
+    background:rgb(189,168,140);
+    color:white;
+    text-decoration:none; /*uncross*/    
+    font-size:15px; /*size*/
+    display: inline-block;
+    padding: 10px;/* The inside margins can be adjusted as needed */
+    margin: 10px;/* Margins can be adjusted as needed */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* Added hover effect */
+    transition: background 0.3s ease;
+ }
+
+ .link-box:hover {
+  background: #543125;
+}
+
+ body > header > nav > ul > li:nth-child(2) > .link-box {  
+    background-color: #543125;  
+    color: white;  
+}
+
+/* slideshow */  
+.carousel {  
+  position: relative;  
+  width: 100%;
+  overflow: hidden; /* Hide parts of the picture that are beyond the container */  
+}  
+  
+.carousel-item {
+  width: 70%;
+  height: auto;
+  display: none;
+  margin-left:15%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, display 0.5s ease-in-out;
+}
+
+.carousel-item.active {  
+  opacity: 1;
+  display:block;
+}
+  
+.carousel-item:first-child {  
+  display: block;  
+}  
+  
+.carousel-prev, .carousel-next {  
+  position: absolute;  
+  top: 50%;  
+  transform: translateY(-50%);  
+  cursor: pointer;  
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white;  
+  border: none;  
+  padding: 10px 20px;  
+  z-index: 10;
+}  
+  
+.carousel-prev {  
+  left: 10px;  
+  margin-left:15%;
+}  
+  
+.carousel-next {  
+  right: 10px;  
+  margin-right:15%;
+}
+  
+/* Media query Adjust the font size */  
+@media (max-width: 600px) {  
+  .info-block p {  
+    font-size: 1.8vw; 
+   }  
+  .info-block {
+       height: auto; 
+       width: 100%; 
+   }
+}  
+@media (min-width: 600px) and (max-width: 1200px) {  
+  .info-block p {  
+       font-size: 1.5vw; 
+   }  
+  .info-block {
+       height: auto; 
+       width: 45%;
+   }
+}  
+@media (min-width: 1200px) {  
+  .info-block p {  
+    font-size: 1.3vw; 
+   }  
+  .info-block {
+       height: 800px; 
+       width: calc(30% - 50px); 
+   }
+}
+
+.info-blocks { 
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    padding: 20px; 
+} 
+    
+.info-block { 
+    width: calc(30% - 50px);
+    height: 800px; 
+    margin: 10px; 
+    box-shadow: 0 3px 4px rgba(80, 32, 32, 0.1); 
+    background-color: rgb(189,168,140); 
+    padding: 15px; 
+} 
+    
+.info-block img { 
+    width: 60%; 
+    height: 300px; 
+    display: block; 
+    margin-top: 0%;
+    padding-left: 20%;
+}
+
+.contact-info { 
+    background-color: #d3cece;  
+    border-top: 1px solid #ddd;  
+    padding: 20px; 
+    margin-top: 20px; 
+    text-align: center; 
+} 
+
+.contact-info p { 
+    margin: 0 0 10px 0;  
+} 
+
+.image-container {  
+    display: flex;  
+    justify-content: flex-end;  
+    align-items: center;  
+    margin-top: 20px;  
+  }  
+    
+  .image-container img {  
+    width: 40%; 
+    height: auto; 
+  }
+
+  footer {
+    background:#333;
+    padding:10px;
+    color:#c5b4b4;
+    text-align: center; 
+    font-size:1.5vw;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Overall style of navigation bar */
+ body > nav {
+    background-color: #333;
+    position: relative;
+  }
+  
+  /* Unordered list style */
+ body > nav > ul {
+    list-style-type: none;
+    padding: 0; /* Remove the default padding */  
+    margin: 0; /* Remove the default margin */  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* List item style */
+  body > nav > ul > li {
+    position: relative;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 0;
+    font-size:2.5vw;
+    font-family: 华文新魏;
+  }
+
+  @media (max-width: 400px) {  
+    body > nav > ul > li {
+      font-size:2.0vw;
+    }
+  }  
+
+  body nav ul li a {
+    text-decoration: none; /* ununderline */
+    color: white; 
+}
+
+  
+  /* Drop-down menu style, initially hidden */
+  body > nav > ul li ul {  
+    display: none;  
+    position: absolute;  
+    top: 100%;  
+    left: 0; /* Make sure the drop-down menu starts to the left of the parent list item */  
+    background-color: #333;  
+    list-style-type: none; 
+    padding: 0;  
+    font-size:1.8vw;
+    width:180px;
+}  
+  
+  /* A drop-down menu is displayed when the mouse hovers over a list item */
+  body > nav > ul > li:hover > ul {
+    display: block;
+  }
+  
+  /* List item style in the drop-down menu */
+  body > nav > ul ul li {
+    width: 100%;
+    padding:10px;
+    font-family: 华文新魏;
+  }
+  
+  /* logo */
+  #logo {
+    width: 10.0vw;
+    border-radius: 30%;
+  }
+
+  body > nav > p {
+    font-family:华文隶书;
+    color:rgb(234, 214, 192);
+    font-size:4.5vw;
+    padding-top: 20px;
+    padding-left:5%;
+    margin-top:0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }

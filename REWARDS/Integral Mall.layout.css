@@ -1,0 +1,156 @@
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 20px;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    background-color: #fbfaf9;
+}  
+
+.back-button {  
+    position: absolute;  
+    top: 180px;  
+    left: 20px;  
+    font-size: 1.75em;
+    font-family: Arial;
+    background-color: rgb(156, 122, 106);  
+    color: white;
+}  
+
+.back-button:hover{
+  background-color: rgb(77, 40, 23);
+}
+
+header{  
+    text-align: center;  
+    font-family: Arial;
+    font-size: 2.5em;
+    color: rgb(77, 40, 23);  
+    font-weight: bold; 
+}  
+  
+.rewards {  
+    display: flex;  
+    flex-wrap: wrap;  
+    justify-content: space-around;  
+    margin-top: 20px;  
+}  
+  
+.reward-item {  
+    border: 1px solid #fdfbf7;  
+    padding: 10px;  
+    margin: 5%;  
+    width: 200px;  
+    text-align: center;  
+    background-color: rgb(189, 168, 140);
+}  
+  
+.reward-item img {  
+    width: 100%;  
+    height: auto;  
+    margin-bottom: 10px;  
+}  
+  
+.redeem-btn {  
+    padding: 5px 10px;  
+    background-color:rgb(77, 40, 23);  
+    color: white;  
+    border: none;  
+    cursor: pointer;  
+}  
+  
+.redeem-btn:hover {  
+    background-color: black;  
+}
+
+footer {
+    background:#333;
+    padding:10px;
+    color:#c5b4b4;
+    text-align: center; 
+    width: 100%;
+    font-size:1.5vw;
+}  
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+body > nav {
+    background-color: #333;
+    position: relative;
+    width: 100%;
+}
+  
+body > nav > ul {
+    list-style-type: none;
+    padding: 0;   
+    margin: 0;   
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+body > nav > ul > li {
+    position: relative;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 0;
+    font-size:2.5vw;
+    font-family: 华文新魏;
+  }
+
+  @media (max-width: 400px) {  
+    body > nav > ul > li {
+      font-size:2.0vw;
+    }
+  }  
+
+body nav ul li a {
+    text-decoration: none; 
+    color: white; 
+}
+
+body > nav > ul li ul {  
+    display: none;  
+    position: absolute;  
+    top: 100%;  
+    left: 0;  
+    background-color: #333;  
+    list-style-type: none;   
+    padding: 0;   
+    font-size:1.8vw;
+    width:180px;
+}  
+  
+
+body > nav > ul > li:hover > ul {
+    display: block;
+}
+  
+body > nav > ul ul li {
+    width: 100%;
+    padding:10px;
+    font-family: 华文新魏;
+}
+  
+body > nav > p {
+    font-family:华文隶书;
+    color:rgb(234, 214, 192);
+    font-size:4.5vw;
+    padding-top: 20px;
+    padding-left:5%;
+    margin-top:0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+#logo {
+    width: 10.0vw;
+    border-radius: 30%;
+}

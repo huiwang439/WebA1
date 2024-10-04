@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Type</title>
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_layout.css">
+</head>
+
+<body class="body-background">
+  <nav>
+    <p>Your Name Coffee</p>
+    
+    <ul>
+      <li><a href="../Home/Home.html" target="top">Home</a></li>
+      
+      <li><a href="../AboutUs/AudienceGroup.html" target="top">About</a>
+        <ul>
+            <li><a href="../AboutUs/AudienceGroup.html" target="top">Audience Group</a></li>  
+            <li><a href="../AboutUs/ManagementIdea.html" target="top">Management Idea</a></li>  
+            <li><a href="../AboutUs/SocialResponsibility.html" target="top">Social Responsibility</a></li>    
+        </ul>
+      </li>
+      
+      <li><a href="../Introduction/Type.html" target="top">Introduction</a>
+        <ul>
+            <li><a href="../Introduction/Type.html" target="top">Type</a></li>  
+            <li><a href="../Introduction/Dealing.html" target="top">Dealing</a></li>  
+            <li><a href="../Introduction/Making.html" target="top">Making</a></li>    
+        </ul>
+      </li>
+
+      <li><img id="logo" src="logo.jpg" alt="logo" onclick="location.href='../Home/Home.html'"></li>
+      
+      <li><a href="../Menu/MENU.html" target="top">Menu</a>
+        <ul>
+          <li><a href="../Menu/MENU.html" target="top">Coffee</a></li>  
+          <li><a href="../Menu/Cake.html" target="top">Cake</a></li>  
+          <li><a href="../Menu/Coffee Bean.html" target="top">Coffee Bean</a></li>    
+      </ul>
+      </li>
+         
+      <li><a href="../REWARDS/REWARDS.html" target="top">Rewards</a>
+        <ul>
+            <li><a href="../REWARDS/Join Us.html" target="top">Join Us</a></li>  
+            <li><a href="../REWARDS/Integral Mall.html" target="top">Integral Mall</a></li>   
+        </ul>
+      </li>
+      
+      <li><a href="../Contact/Contact.html" target="top">Contact</a>
+        <ul>
+          <li><a href="../Contact/Contact.html" target="top">Contact Us</a></li>  
+          <li><a href="../Contact/Reservation.html" target="top">Online Reservation</a></li>   
+          <li><a href="../Contact/Comment.html" target="top">Online Comment</a></li>  
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+      
+	<header>
+            <img src="header1.jpg">
+    </header>
+  <div id="header-buttons">  
+      <button onclick="navigateTo('../Introduction/Type.html', 'Type')">Type</button>  
+      <button onclick="navigateTo('../Introduction/Dealing.html', 'Dealing')">Dealing</button>  
+      <button onclick="navigateTo('../Introduction/Making.html', 'Making')">Making</button>  
+  </div>  
+    
+  <script>  
+  function navigateTo(url, pageName) {  
+      // 设置localStorage中的当前页面  
+      localStorage.setItem('currentPage', pageName);  
+      // 导航到新页面  
+      location.href = url;  
+  }  
+    
+  document.addEventListener("DOMContentLoaded", function() {  
+      var buttons = document.querySelectorAll("#header-buttons button");  
+      var currentPage = localStorage.getItem('currentPage') || ''; // 获取当前页面，如果没有则默认为空  
+    
+      buttons.forEach(function(button) {  
+          // 根据当前页面的名称，给对应的按钮添加或移除active类  
+          if (button.getAttribute('onclick').includes(currentPage)) {  
+              button.classList.add("active");  
+          } else {  
+              button.classList.remove("active");  
+          }  
+      });  
+  });  
+  </script>
+
+		<main>
+			<aside>
+                <img src="Acabica.jpg">
+                <p><strong>Arabica</strong></p>
+                <img src="Robusta.jpg">
+                <p><strong>Robusta</strong></p>
+                <img src="Liberica.jpg">
+                <p><strong>Liberian</strong></p>
+            </aside>    
+			<div id="content1">
+                <p><strong>Arabica</strong>, the first coffee variety to be discovered, is now the dominant force in the global consumer market, accounting for more than 70% of the total. Its uniqueness lies in its excellent acidity, as well as its fresh and pleasant floral aroma and intoxicating taste, bringing coffee lovers a rich and diverse flavor experience.</p>
+            </div>
+            <div id="content2">
+                <p><strong>Robusta</strong> coffee originates from the Congo region of Africa and accounts for about 20 to 25 percent of global coffee cultivation. Although its flavor is not as excellent as other varieties and its caffeine content is relatively high, it is cheap to grow and rich in oils, so it is often used in blends or instant coffee.</p>
+            </div>
+            <div id="content3">
+                <p><strong>Liberian</strong> coffee has a small market share, only about 2% of global consumption, and is not used on a daily basis due to its greater scarcity and higher price. With a larger tree and fruit than other varieties, Liberica coffee has a teardrop-like shape and a flavor similar to Robusta. Its popularity stems from its high caffeine content as well as its floral aroma and sharp, dry taste.</p>
+            </div>
+		</main>
+		<div id="footer">
+      @ All rights reserved YourName Coffee<br>
+            Last updated: October 3, 2024<br>
+      Contact Email address: 9952623YNC@gmail.com
+    </div>
+</body>
+
+</html>

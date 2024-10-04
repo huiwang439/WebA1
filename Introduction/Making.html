@@ -1,0 +1,149 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Coffee Making</title>  
+    <link rel="stylesheet" href="style_layout3.css">  
+    <link rel="stylesheet" href="style3.css">
+</head>  
+<body class="body-background">  
+    <nav>
+        <p>Your Name Coffee</p>
+        
+        <ul>
+          <li><a href="../Home/Home.html" target="top">Home</a></li>
+          
+          <li><a href="../AboutUs/AudienceGroup.html" target="top">About</a>
+            <ul>
+                <li><a href="../AboutUs/AudienceGroup.html" target="top">Audience Group</a></li>  
+                <li><a href="../AboutUs/ManagementIdea.html" target="top">Management Idea</a></li>  
+                <li><a href="../AboutUs/SocialResponsibility.html" target="top">Social Responsibility</a></li>    
+            </ul>
+          </li>
+          
+          <li><a href="../Introduction/Type.html" target="top">Introduction</a>
+            <ul>
+                <li><a href="../Introduction/Type.html" target="top">Type</a></li>  
+                <li><a href="../Introduction/Dealing.html" target="top">Dealing</a></li>  
+                <li><a href="../Introduction/Making.html" target="top">Making</a></li>    
+            </ul>
+          </li>
+    
+          <li><img id="logo" src="logo.jpg" alt="logo" onclick="location.href='../Home/Home.html'"></li>
+          
+          <li><a href="../Menu/MENU.html" target="top">Menu</a>
+            <ul>
+              <li><a href="../Menu/MENU.html" target="top">Coffee</a></li>  
+              <li><a href="../Menu/Cake.html" target="top">Cake</a></li>  
+              <li><a href="../Menu/Coffee Bean.html" target="top">Coffee Bean</a></li>    
+          </ul>
+          </li>
+             
+          <li><a href="../REWARDS/REWARDS.html" target="top">Rewards</a>
+            <ul>
+                <li><a href="../REWARDS/Join Us.html" target="top">Join Us</a></li>  
+                <li><a href="../REWARDS/Integral Mall.html" target="top">Integral Mall</a></li>   
+            </ul>
+          </li>
+          
+          <li><a href="../Contact/Contact.html" target="top">Contact</a>
+            <ul>
+              <li><a href="../Contact/Contact.html" target="top">Contact Us</a></li>  
+              <li><a href="../Contact/Reservation.html" target="top">Online Reservation</a></li>   
+              <li><a href="../Contact/Comment.html" target="top">Online Comment</a></li>  
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    
+
+    <header>  
+        <div class="header-bg">  
+            <img src="header1.jpg" alt="咖啡杯" class="coffee-cup">  
+        </div>  
+        <div id="header-buttons">  
+            <button onclick="navigateTo('../Introduction/Type.html', 'Type')">Type</button>  
+            <button onclick="navigateTo('../Introduction/Dealing.html', 'Dealing')">Dealing</button>  
+            <button onclick="navigateTo('../Introduction/Making.html', 'Making')">Making</button>  
+        </div>  
+          
+        <script>  
+        function navigateTo(url, pageName) {  
+            // 设置localStorage中的当前页面  
+            localStorage.setItem('currentPage', pageName);  
+            // 导航到新页面  
+            location.href = url;  
+        }  
+          
+        document.addEventListener("DOMContentLoaded", function() {  
+            var buttons = document.querySelectorAll("#header-buttons button");  
+            var currentPage = localStorage.getItem('currentPage') || ''; // 获取当前页面，如果没有则默认为空  
+          
+            buttons.forEach(function(button) {  
+                // 根据当前页面的名称，给对应的按钮添加或移除active类  
+                if (button.getAttribute('onclick').includes(currentPage)) {  
+                    button.classList.add("active");  
+                } else {  
+                    button.classList.remove("active");  
+                }  
+            });  
+        });  
+        </script>
+        <div class="header-p">
+        <p><strong>1. Drip Filter: Using gravity to let hot water pass through the layer of coffee powder, slowly drip filtering out the coffee liquid, suitable for daily drinking, with a balanced taste.<br>
+            2. French Press: extracting coffee through immersion and physical pressure, which can fully release the oils and flavors of coffee, with a rich and mellow taste.<br>
+            3. Espresso: high-pressure rapid extraction of finely ground coffee powder, to get highly concentrated coffee liquid, strong taste, rich aroma, is the basis for making a variety of coffee drinks.<br>
+            4. Cold extraction: low temperature and long time soaking coarse ground coffee powder, the extracted coffee has a soft taste, low acidity and obvious sweetness, suitable for summer drinking.<br>
+            5. Hand brewing: manually extracting coffee through fine control of water temperature, water flow rate and water injection in a circle, etc. It can highlight the original flavor of coffee beans and is suitable for coffee lovers to explore different flavors.<br>    
+        </strong></p>  
+        </div>
+    </header>  
+    <main>  
+        <section class="info-blocks">  
+            <div class="info-block">  
+                <img src="lengpao.jpg" alt="lengpao">  
+                <h2>Cold Brew</h2>  
+                <p>
+                    Coffee powder + water immersion
+                </p> 
+                <p><strong>Mode</strong>: Immersion extraction</p>
+                <p><strong>Taste</strong>: Bitter with low acidity</p>
+                <p><strong>Time</strong>: 8-24h</p> 
+            </div>  
+            <div class="info-block">  
+                <img src="bingmeishi.jpg" alt="bingmeishi">  
+                <h2>Ice Americano</h2>  
+                <p>Concentrate + water + ice	</p>
+                <p><strong> Method</strong>: High-pressure extraction in an espresso machine</p>
+                <p><strong>Sensation</strong>: Highly mellow with smoky flavor</p>
+                <p><strong>Time</strong>: 30s</p> 
+            </div>  
+            <div class="info-block">  
+                <img src="bingdi.jpg" alt="bingdi">  
+                <h2>Ice Drip</h2>  
+                <p>Ice water dripping into the ground coffee</p>
+                <p><strong>Mode</strong>: Extraction</p>
+                <p><strong>Taste</strong>: outstanding sweetness and sourness, with a strong sense of layering</p>	
+                <p><strong>Time</strong>: after 4-8h of iced drip, continue to refrigerate for 24h</p>
+            </div>
+            <div class="info-block">  
+                <img src="bingshouchong.jpg" alt="bingshouchong">  
+                <h2>Ice Hand Brewed</h2>  
+                <p>Hot water brewing coffee + ice cubes</p>
+                <p><strong>Mode</strong>: Drip Filter Extraction</p>
+                <p><strong>Taste</strong>: Outstanding sweetness and sourness, strong layers of flavor</p>	
+                <p><strong>Time</strong>: 2-2.5mins</p> 
+            <!-- 可以根据需要添加更多信息块 -->  
+            </div>
+        </section>  
+    
+    </main>  
+    <footer>  
+        <p>@ All rights reserved YourName Coffee<br>
+            Last updated: October 3, 2024<br>
+            Contact Email address: 9952623YNC@gmail.com
+        </p>  
+    </footer>  
+</body>  
+</html>
