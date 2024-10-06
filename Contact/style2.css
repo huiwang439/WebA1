@@ -12,8 +12,6 @@
     height:80px;
     line-height: 80px;
 }
-
-
  
  .button li{
   /* width: 200px;
@@ -54,98 +52,6 @@ color: white;
   background-color: rgb(54, 47, 47); /* Background color on hover */
 }
 
-.contact{
-  /* margin-top: 10rem; */
-  /*margin-bottom: 10rem; */
-  background-color: #dedede;
-}
-.contact .icons-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(29rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
-  gap: 1.5rem;
-  /* margin-top:10rem; */
-  /* background-color: white; */
-}
-
-.contact .icons-container .icons {
-  text-align: center;
-  border: 0.1rem solid rgba(0,0,0,0.1);
-  padding: 2rem;
-  /* background-color: white; */
-  background-color: white;
-  margin-top:2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  
-}
-
-
-/* symbolize */
-.contact .icons-container .icons i {
-  height: 6rem;
-  width: 6rem;
-  line-height: 6rem;
-  font-size: 2.5rem;
-  background: #5e400ba3;
-  color: #fff;
-  border-radius: 50%;
-}
-
-.contact .icons-container .icons h3 {
-  color: #222;
-  font-size: 2rem;
-  padding: 1rem 0;
-}
-
-.contact .icons-container .icons p {
-  color: #666;
-  font-size: 1.5rem;
-  line-height: 2;
-}
-
-.contact .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 2rem;
-   /* margin-bottom: 2rem;  */
-margin-left: 2rem;
-}
-.contact .row .left{
-  width: 50%;
-}
-.contact .row .arrive ,.time{
-  text-align: center;
-  border: 0.1rem solid rgba(0,0,0,0.1);
-  padding: 2rem;
-  background-color: white;
-  /* margin-left: 2rem; */
-  margin-bottom: 2rem;
-}
-.contact .row h3{
-  color: #222;
-  font-size: 2rem;
-  padding: 1rem 0;
-}
-.contact .row p{
-color: #666;
-font-size: 1.5rem;
-line-height: 2;
-}
- 
-.map {
-  flex:1 1 40rem;
-  width: 50%;
-  height:auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-right: 2rem;
-}
 
 .book{
   background-color: #c8bcb5;
@@ -157,7 +63,7 @@ line-height: 2;
   /* align-items: center; */
 }
 .book h3{
-  font-size: 50px;
+  font-size: 5vw;
   color: #461010;
 }
  .book .form{
@@ -190,13 +96,14 @@ line-height: 2;
 } */
 .book label {
   display: block;
+  margin-top: 0.5rem;
   margin-bottom: .5rem;
-  font-size: 20px;
+  font-size: 2vw;
   color: #3d3232;
   margin-left:2rem;
 }
  .book input{
- width: 30rem;
+ width: 80%;
  height: 2rem;
 }
 .book textarea{
@@ -280,80 +187,6 @@ img {
 }
 
 
-
-
-
-.comment{
-  background-color: #eae3e6;
-  color: white;
-  /* padding: 60px,20px; */
-  display: flex;
-  flex-direction: row;
-  /* align-items: center; */
-  /* height: 50px; */
-  
-}
-.comment .form{
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin: 2rem;
-  border: 1px solid #462b3d46;
-} 
-.comment h3{
-  font-size: 50px;
-  color: #461010;
-  margin-left: 1rem;
-}
-
-.comment input,.comment button,.comment textarea{
-  background-color: transparent;
-  color:black;
-  border: 1px solid #462b3d46;
-  /* padding: 10px; */
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  margin-left: 2rem;
- }
- .comment input{
- width: 30rem;
- height: 2rem;
-}
-.comment textarea{
-  width: 35rem;
- height: 5rem;
-}
-  .comment label{
-    display: block;
-    margin-bottom: .5rem;
-    font-size: 20px;
-    color: #3d3232;
-    margin-left:2rem;
- } 
- .comment button{
-  background-color:rgb(118, 110, 110);
-  color: white;
- }
- 
- .comment button:hover{
-  background-color: rgb(54, 47, 47); /* Background color on hover */
-}
-
- .comment .right{
-      width: 50%;
-      /* height:auto; */
-      /* padding:20px; */
-      margin: 2rem;
- }
-
- .comment .right img{
-     width: 100%;
-    height: 100%;  
-    margin-right: 2rem;
- }
-
-
-
  footer {
   margin-top:20px;
   background:#333;
@@ -397,7 +230,47 @@ body > header > nav > ul > li:nth-child(2) > .link-box {
   color: white;  
 }
 
-
+@media (max-width:912px){
+  .book{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .book .form{
+    width: 85%;
+    /* margin-right: 2rem; */
+    /* padding-right: 2rem; */
+    /* height:500px; */
+  }
+  .book button{
+    margin-top: 0.25rem;
+    width: 120px;
+    height:30px;
+    /* font-size: 1.5vw; */
+    font-size:0.61rem;
+  }
+  .book .environment{
+    width: 85%;
+        height:auto;
+        /* padding:20px; */
+        margin-top: 0.5rem;
+  }
+   
+  .book input{
+    margin-top: 0.2rem;
+  }
+   
+  .book label{
+    /* margin-top:0.3rem; */
+  }
+   
+}
+@media (max-width: 400px) {  
+  body > nav > ul > li {
+    font-size:2.0vw;
+  }
+}  
 
 /* .contact .row form {
   padding: 2rem;
@@ -505,3 +378,164 @@ footer {
   }
 } */
 /* # sourceMappingURL=style.css.map  */
+.contact{
+  /* margin-top: 10rem; */
+  /*margin-bottom: 10rem; */
+  background-color: #dedede;
+}
+.contact .icons-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(29rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+  gap: 1.5rem;
+  /* margin-top:10rem; */
+  /* background-color: white; */
+}
+
+.contact .icons-container .icons {
+  text-align: center;
+  border: 0.1rem solid rgba(0,0,0,0.1);
+  padding: 2rem;
+  /* background-color: white; */
+  background-color: white;
+  margin-top:2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  
+}
+
+
+/* symbolize */
+.contact .icons-container .icons i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  font-size: 2.5rem;
+  background: #5e400ba3;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.contact .icons-container .icons h3 {
+  color: #222;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.contact .icons-container .icons p {
+  color: #666;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.contact .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+   /* margin-bottom: 2rem;  */
+margin-left: 2rem;
+}
+.contact .row .left{
+  width: 50%;
+}
+.contact .row .arrive ,.time{
+  text-align: center;
+  border: 0.1rem solid rgba(0,0,0,0.1);
+  padding: 2rem;
+  background-color: white;
+  /* margin-left: 2rem; */
+  margin-bottom: 2rem;
+}
+.contact .row h3{
+  color: #222;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+.contact .row p{
+color: #666;
+font-size: 1.5rem;
+line-height: 2;
+}
+ 
+.map {
+  flex:1 1 40rem;
+  width: 50%;
+  height:auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}
+
+.comment{
+  background-color: #eae3e6;
+  color: white;
+  /* padding: 60px,20px; */
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  /* height: 50px; */
+  
+}
+.comment .form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 2rem;
+  border: 1px solid #462b3d46;
+} 
+.comment h3{
+  font-size: 50px;
+  color: #461010;
+  margin-left: 1rem;
+}
+
+.comment input,.comment button,.comment textarea{
+  background-color: transparent;
+  color:black;
+  border: 1px solid #462b3d46;
+  /* padding: 10px; */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+ }
+ .comment input{
+ width: 30rem;
+ height: 2rem;
+}
+.comment textarea{
+  width: 35rem;
+ height: 5rem;
+}
+  .comment label{
+    display: block;
+    margin-bottom: .5rem;
+    font-size: 20px;
+    color: #3d3232;
+    margin-left:2rem;
+ } 
+ .comment button{
+  background-color:rgb(118, 110, 110);
+  color: white;
+ }
+ 
+ .comment button:hover{
+  background-color: rgb(54, 47, 47); /* Background color on hover */
+}
+
+ .comment .right{
+      width: 50%;
+      /* height:auto; */
+      /* padding:20px; */
+      margin: 2rem;
+ }
+
+ .comment .right img{
+     width: 100%;
+    height: 100%;  
+    margin-right: 2rem;
+ }

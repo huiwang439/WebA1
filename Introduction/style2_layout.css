@@ -1,30 +1,28 @@
-@charset "utf-8"; 
-
-body {  
-    font-family: Arial, sans-serif;  
-    margin: 0;  
-    padding: 0;  
-    background-color: white;  
-}  
-  
-.header-bg {  
-    background-color: #453029; /* 棕色背景 */  
-    color: #ecdbdb;  
-    padding: 20px; 
-    text-align: center;  
-}  
-  
-.coffee-cup {  
-    width: 100%; /* 假设图片大小 */  
-    height: 500px;  
-    margin-bottom: 10px;  
-}  
-.coffee-b {
-    width: 20%;
-    height: 300px;
-    margin-left: 60px;
+/*默认样式的清零*/ 
+*{
+	margin: 0px;
+	padding: 0;
 }
 
+body {  
+	font-size:16px; 
+	background-color:whitesmoke;
+    margin:0 auto; /*水平居中*/
+	width:100%; 	
+}
+header > ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;  
+}
+header > ul > li {
+    display: inline; 
+    text-align: center;
+	margin: 0 10px;  
+	margin-left: 100px;
+}
 #header-buttons button {    
     background-color: rgb(189, 168, 140); /* 绿色背景 */    
     border: none;    
@@ -54,56 +52,146 @@ body {
 #header-buttons button.active {    
     background-color: #543125; /* 被点击时的颜色，但会立即恢复 */  
 }  
-  
-h1 {  
+
+header { 
+	height: 100%;/*必须添加，否则header下面有10px而不是5px空白*/
+    width: 100%;
+    background-color:#453029;
+    
+}
+header > img {
+    width: 100%;
+    height: 500px;
+    padding-bottom: 25px;
+}
+header > ul {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%
+}
+
+#nav{ 
+	height:20px;	
+	background-color: white; 		
+	font: 18px/30px 微软雅黑;
+	color: #dc8d8d;
+	letter-spacing: 2px;
+    text-align: center;
+}
+
+main {
+    height: auto;
+    width:100%;
+}
+#method {  
     text-align: center;  
-    margin-top: 20px;  
+    margin: 0 auto;  
+    max-width: 800px; /* 设置一个合理的最大宽度 */  
 }  
   
-.info-blocks {  
+#method .index p {  
+    background-color: #543125;  /* 背景颜色 */  
+    color: white;              /* 文本颜色 */  
+    font-size: 40px;           /* 调整后的字体大小 */  
+    margin: 0 0 30px 0;        /* 调整后的下边距 */  
+    font-family: '华文新魏', sans-serif;  /* 替换的字体类型 */  
+}  
+  
+#method .image-container {  
     display: flex;  
-    justify-content: space-around;  
-    flex-wrap: wrap;  
-    padding: 20px;  
+    flex-wrap: nowrap;  
+    justify-content: space-between;  
+    width: 100%;  
+    box-sizing: border-box;  
+    margin-bottom: 20px; /* 添加底部外边距以与新布局分隔 */  
 }  
   
-.info-block {  
-    width:90%;
-    width:calc(30% - 10px); /* 假设三列布局，每列间距为20px */ 
-    margin: 5px;  
-    box-shadow: 0 3px 4px rgba(80, 32, 32, 0.1);  
-    background-color: rgb(189, 168, 140);  
-    padding: 10px;  
+#method .image-container img {  
+    height: auto;  
+    width: calc(25% - 10px); /* 这个设置将被.row-container中的特定选择器覆盖 */  
+    border-radius: 10%;  
+    margin: 0 5px;  
 }  
   
-.info-block img {  
-    width: 300px;  
-    height: 300px;  
-    border-radius:50%;
-    display: block;  
-    margin-top: 0%;
-    margin-left: 20%;
+/* 为.row-container中的.image-column图片设置特定的宽度和高度 */  
+.row-container .image-column img {  
+    width: calc(50% - 0.5px); 
+    height: auto;  
+    border-radius: 5%;
+    margin-top:20%;
+}  
+  
+.row-container {  
+    display: flex;  
+    flex-direction: column; 
+   
+}  
+  
+.row {  
+    display: flex;  
+    border-bottom: 1px solid #ccc; /* 为每一行添加底部边框 */  
+    padding: 12px 0; /* 添加内边距以与边框分隔内容 */  
+    box-sizing: border-box;  
+}  
+  
+.row:last-child {  
+    border-bottom: none; /* 移除最后一行的边框 */  
+}  
+  
+.image-column {  
+    flex: 0 0 30%; /* 左边一列，固定宽度30% */  
 }
-.info-block p{
-    margin: 0 0 10px 0; /* 移除上下边距，设置下边距 */  
+  
+.text-column {  
+    flex: 1; /* 右边一列，占据剩余空间（65%左右，根据浏览器计算） */  
+    padding-left: 10px; /* 可选：为文本列添加左内边距以与图片分隔 */  
+    font-size: 2;
 }
-.contact-info {  
-    background-color: #543125; /* 浅灰色背景 */  
-    border-top: 1px solid #543125; /* 顶部细边框 */  
+.text-column p {  
+    font-size: 18px; /* 根据需要调整文字大小 */  
+    background-color: rgb(189, 168, 140);
+    text-align: left;
+    margin-right: 2%;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+#tool p{
+    background-color: #543125;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    font-family: 华文新魏;
+}
+.container {  
+    width: 80%; /* 容器宽度设置为 80% */  
+    margin: 0 auto; /* 自动左右边距，使容器居中 */  
+    display: flex; /* 使用 flexbox 布局 */  
+    justify-content: center; /* 水平居中内容 */  
+    align-items: center; /* 垂直居中内容（可选，视情况而定） */  
+    flex-wrap: nowrap; /* 防止内容换行 */  
+    overflow: hidden; /* 清除浮动（虽然在使用 flexbox 时通常不需要） */  
 }  
   
-.contact-info p {  
-    margin: 0 0 10px 0; /* 移除上下边距，设置下边距 */  
-}  
+.container img {  
+    max-width: 50%; /* 每张图片的最大宽度设置为容器的 45%，留有余量以应对边框、间距等 */  
+    margin: 5%; /* 每张图片周围的间距，确保不会紧贴在一起 */  
+    box-sizing: border-box; /* 确保 padding 和 border 不会增加图片的实际尺寸 */  
+}
   
-/* 页脚样式 */  
-footer {  
-    text-align: center; /* 文本居中 */  
-    padding: 10px 0; /* 上下内边距 */  
-    background-color: #333; /* 深灰色背景 */  
-    color: rgb(189, 168, 140); /* 白色文字 */  
-    position: static; /* 默认为static，如果不需要固定在底部 */  
-    width: 100%; /* 宽度占满 */  
-    margin-top: 20px; /* 与上方内容保持间距 */  
+
+
+#footer { 
+	height:auto; 
+	position: static;
+	background-color: #333;
+	clear:both; /*新加代码*/
+	margin-top: 20px;
+	text-align: center;
+    color: rgb(189, 168, 140);
+    padding: 20px 0;
     font-size:1.5vw;
-}  
+}
+

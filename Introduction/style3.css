@@ -87,7 +87,7 @@ body > nav > ul > li:hover > ul {
 body > nav > ul ul li {
   width: 100%;
   padding:10px;
-  font-family: 华文隶书;
+  font-family: 华文新魏;
 }
 
 /* logo样式 */
@@ -98,8 +98,11 @@ body > nav > ul ul li {
 
 body > nav > p {
   font-family:华文隶书;
-  color:white;
+  color:rgb(234, 214, 192);
   font-size:4.5vw;
   padding-top: 20px;
   padding-left:5%;
+  margin-top:0;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }

@@ -4,13 +4,9 @@ header>ul>li>a{
     color: aliceblue;
     font-size: 125%;
 }
-main > aside > p{
-    color: #543125;
-    font-size: 35px;
-    font-family: 华文隶书;
-}
+
 .body-background {  
-  background-image: url('background4.jpg');  
+  background-image: url('background.jpg');  
   background-size: cover;  
   background-position: center;  
   /* 可以添加更多样式 */  
@@ -93,8 +89,11 @@ body > nav > ul ul li {
 
 body > nav > p {
   font-family:华文隶书;
-  color: rgb(234, 214, 192) ;
+  color:rgb(234, 214, 192);
   font-size:4.5vw;
   padding-top: 20px;
   padding-left:5%;
+  margin-top:0;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }

@@ -1,25 +1,27 @@
-@charset "utf-8"; 
+/*默认样式的清零*/ 
+*{
+	margin: 0px;
+	padding: 0;
+}
 
 body {  
-    font-family: Arial, sans-serif;  
-    margin: 0;  
-    padding: 0;  
-    background-color:whitesmoke;  
-}  
-  
-.header-bg {  
-    background-color: #453029; /* 棕色背景 */  
-    color: #ecdbdb;  
-    padding: 20px; 
+	font-size:16px; 
+	background-color:whitesmoke;
+    margin:0 auto; /*水平居中*/
+	width:100%; 	
+}
+header > ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     text-align: center;  
-}  
-.header-p{
-    background-color: rgba(80, 32, 32, 0.187);
-    width: 96%;
-    margin-left: 2%;
-    margin-right: 2%;
-    font-size: 20px;
-    font-family: 华文仿宋;
+}
+header > ul > li {
+    display: inline; 
+    text-align: center;
+	margin: 0 10px;  
+	margin-left: 100px;
 }
 #header-buttons button {    
     background-color: rgb(189, 168, 140); /* 绿色背景 */    
@@ -51,48 +53,99 @@ body {
     background-color: #543125; /* 被点击时的颜色，但会立即恢复 */  
 }  
 
-.coffee-cup {  
-    width: 100%; /* 假设图片大小 */  
-    height: 500px;  
-    margin-bottom: 10px;  
-}  
-  
-.info-blocks {  
-    display: flex;  
-    justify-content: space-around;  
-    flex-wrap: wrap;  
-    padding: 20px;  
-}  
-  
-.info-block {  
-    width: calc(25% - 50px); /* 假设三列布局，每列间距为20px */ 
-    height: auto; 
-    margin: 10px;  
-    box-shadow: 0 3px 4px rgba(80, 32, 32, 0.1);  
-    background-color: rgb(189, 168, 140);  
-    padding: 15px;  
-}  
-  
-.info-block img {  
-    width: 60%;  
-    height: 300px;  
-    display: block;  
-    margin-top: 0%;
-    padding-left: 20%;
+header { 
+	height: 100%;/*必须添加，否则header下面有10px而不是5px空白*/
+    width: 100%;
+    background-color:#453029;
+    
 }
-  
-.contact-info p {  
-    margin: 0 0 10px 0; /* 移除上下边距，设置下边距 */  
+header > img {
+    width: 100%;
+    height: 500px;
+    padding-bottom: 25px;
+}
+header > ul {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%
+}
+
+#nav{ 
+	height:20px;	
+	background-color: white; 		
+	font: 18px/30px 微软雅黑;
+	color: #dc8d8d;
+	letter-spacing: 2px;
+    text-align: center;
+}
+
+main {
+    height: auto;
+    width:100%;
+}
+
+#process p{
+    background-color: #543125;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    font-family: 华文新魏;
+}
+#process img{
+    height: 500px;
+    width: 55%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#tool p{
+    background-color: #543125;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    font-family: 华文新魏;
+}
+.container {  
+    width: 80%; /* 将容器宽度设置为一个较小的百分比，以便在屏幕上居中 */  
+    margin: 0 auto; /* 自动左右边距，使容器居中 */  
+    overflow: hidden; /* 清除浮动 */  
 }  
   
-/* 页脚样式 */  
-footer {  
-    text-align: center; /* 文本居中 */  
-    padding: 10px 0; /* 上下内边距 */  
-    background-color: #333; /* 深灰色背景 */  
-    color: rgb(189, 168, 140); /* 白色文字 */  
-    position: static; /* 默认为static，如果不需要固定在底部 */  
-    width: 100%; /* 宽度占满 */  
-    margin-top: 20px; /* 与上方内容保持间距 */  
+#content1, #content2, #content3 {  
+    float: left;  
+    /* 调整宽度以适应三列布局，并考虑到边距 */  
+    width: calc(32.66667% - 2%); /* 使用 calc() 函数计算宽度，减去左右边距的总和 */  
+    margin: 1% 1%; /* 为每列添加一些顶部和侧边距 */  
+    box-sizing: border-box; /* 包括边距和边框在内计算元素的总宽度和高度 */  
+}  
+  
+
+#content1 p, #content2 p, #content3 p {  
+    color: #543125;  
+    font-family: '华文隶书', sans-serif;  
+    font-size: 30px;  
+    margin-left: 5px;  
+}  
+
+#content1 img, #content2 img, #content3 img {  
+    width: 80%; 
+    height: 250px;;  
+    border-radius: 8%;  
+}  
+
+#footer { 
+	height:auto; 
+	position: static;
+	background-color: #333;
+	clear:both; /*新加代码*/
+	margin-top: 20px;
+	text-align: center;
+    color: rgb(189, 168, 140);
+    padding: 20px 0;
     font-size:1.5vw;
-}  
+}
+

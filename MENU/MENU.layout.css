@@ -24,10 +24,10 @@ body > h2 {
     padding: 20px;  
     text-align: center;  
 }    
-.image-container {  
+.image-container, .full-screen-image {  
     width: 100%;  
-    overflow: hidden;   
-}  
+    height: auto;  
+}   
   
 .full-screen-image {  
     width: 100%;   
@@ -36,21 +36,22 @@ body > h2 {
 }  
   
 #header-buttons button { 
+    padding: 1vw 2vw; /* 使用vw单位 */  
+    font-size: 2.5vw; /* 使用vw单位 */  
+    margin-left: 5vw; /* 使用vw单位 */  
+    width: 30vw; /* 使用vw单位 */  
+    height: auto; /* 保持按钮比例 */ 
     background-color: rgb(189, 168, 140);
     border: none; 
     color: white; 
-    padding: 10px 20px; 
     text-align: center; 
     text-decoration: none; 
     display: inline-block; 
-    font-size: 20px; 
     margin: 2px 5px; 
     cursor: pointer; 
     margin-left: 50px;
     margin-top: 25px;
-    border-radius: 5px; 
-    width: 200px;
-    height: 50px;
+    border-radius: 5px;
 } 
 
 #header-buttons{
